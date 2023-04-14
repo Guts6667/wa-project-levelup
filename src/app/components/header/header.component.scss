@@ -1,10 +1,31 @@
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: chocolate;
 
-    nav{
-        display: flex;
-        column-gap: 10px;
+  .brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  ul li {
+    display: inline-block;
+    margin: 0 10px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.6;
+      transition: all 0.2s;
+
+      &.active {
+        opacity: 1;
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
     }
+  }
 }

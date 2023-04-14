@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "compodoc:build": "compodoc -p tsconfig.doc.json",
-    "compodoc:go": "compodoc -p tsconfig.doc.json -s -w",
+    "c": "compodoc -p tsconfig.doc.json -s -w",
     "compodoc:serve": "compodoc -s",
     "api": "json-server --watch db.json"
   },

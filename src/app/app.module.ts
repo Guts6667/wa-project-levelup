@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ParametersComponent } from './pages/parameters/parameters.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { HeaderComponent } from './components/header/header.component';
 import { StatsComponent } from './components/stats/stats.component';
@@ -14,12 +14,14 @@ import { AdventuresComponent } from './components/adventures/adventures.componen
 import { AdventureItemComponent } from './components/adventure-item/adventure-item.component';
 import { DonjonsComponent } from './components/donjons/donjons.component';
 import { UserInfosComponent } from './components/user-infos/user-infos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ParametersComponent,
+    SettingsComponent,
     ErrorComponent,
     HeaderComponent,
     StatsComponent,
@@ -28,13 +30,11 @@ import { UserInfosComponent } from './components/user-infos/user-infos.component
     AdventuresComponent,
     AdventureItemComponent,
     DonjonsComponent,
-    UserInfosComponent
+    UserInfosComponent,
+    LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

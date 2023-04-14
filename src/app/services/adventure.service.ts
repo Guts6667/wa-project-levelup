@@ -1,9 +1,24 @@
 import { Injectable } from '@angular/core';
+import { Adventure } from '../interfaces/adventure';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AdventureService {
+  public adventures: Adventure[] = [];
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) {}
+
+  public getAdventures(): Observable<Adventure[]> {
+    return this.httpClient
+      .get<Adventure[]>('http://localhost:3000/adventures')
+      .pipe(
+        map((adventures: Adventure[]) => {
+          this.adventures = adventures;
+          return adventures;
+        })
+      );
+  }
 }

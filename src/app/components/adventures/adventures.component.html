@@ -1,1 +1,5 @@
-<p>adventures works!</p>
+<ul>
+  <li *ngFor="let adventure of adventureService.adventures">
+    {{ adventure?.name }}
+  </li>
+</ul>
