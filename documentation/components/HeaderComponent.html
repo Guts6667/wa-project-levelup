@@ -141,33 +141,15 @@ export class HeaderComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;header&gt;
-    &lt;h1&gt;LevelUp&lt;/h1&gt;
-    &lt;nav&gt;
-        &lt;a routerLink&#x3D;&quot;/&quot; routerLinkActive&#x3D;&quot;active-link&quot;&gt;Accueil&lt;/a&gt;
-        &lt;a routerLink&#x3D;&quot;/parameters&quot; routerLinkActive&#x3D;&quot;active-link&quot;&gt;Paramètres&lt;/a&gt;
-    &lt;/nav&gt;
-    &lt;div&gt;
-        THIS IS A PLACEHOLDER
-    &lt;/div&gt;
-    &lt;!-- Insert User Infos here --&gt;
-&lt;/header&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;header works!&lt;/p&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./header.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    nav{
-        display: flex;
-        column-gap: 10px;
-    }
-}</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -195,8 +177,8 @@ export class HeaderComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header>    <h1>LevelUp</h1>    <nav>        <a routerLink="/" routerLinkActive="active-link">Accueil</a>        <a routerLink="/parameters" routerLinkActive="active-link">Paramètres</a>    </nav>    <div>        THIS IS A PLACEHOLDER    </div>    <!-- Insert User Infos here --></header></div>'
-    var COMPONENTS = [{'name': 'AdventureItemComponent', 'selector': 'app-adventure-item'},{'name': 'AdventuresComponent', 'selector': 'app-adventures'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DonjonsComponent', 'selector': 'app-donjons'},{'name': 'EquipmentItemComponent', 'selector': 'app-equipment-item'},{'name': 'EquipmentsComponent', 'selector': 'app-equipments'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ParametersComponent', 'selector': 'app-parameters'},{'name': 'StatsComponent', 'selector': 'app-stats'},{'name': 'UserInfosComponent', 'selector': 'app-user-infos'}];
+        var COMPONENT_TEMPLATE = '<div><p>header works!</p></div>'
+    var COMPONENTS = [{'name': 'AdventureItemComponent', 'selector': 'app-adventure-item'},{'name': 'AdventuresComponent', 'selector': 'app-adventures'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DonjonsComponent', 'selector': 'app-donjons'},{'name': 'EquipmentItemComponent', 'selector': 'app-equipment-item'},{'name': 'EquipmentsComponent', 'selector': 'app-equipments'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'StatsComponent', 'selector': 'app-stats'},{'name': 'UserInfosComponent', 'selector': 'app-user-infos'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
 </script>

@@ -1,11 +1,19 @@
-<header>
-    <h1>LevelUp</h1>
-    <nav>
-        <a routerLink="/" routerLinkActive="active-link">Accueil</a>
-        <a routerLink="/parameters" routerLinkActive="active-link">Paramètres</a>
-    </nav>
-    <div>
-        THIS IS A PLACEHOLDER
-    </div>
-    <!-- Insert User Infos here -->
-</header>
+<nav>
+  <span class="brand">
+    {{ title }}
+  </span>
+  <ul>
+    <li>
+      <a
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        routerLink="/"
+        >Accueil</a
+      >
+    </li>
+    <li>
+      <a routerLinkActive="active" routerLink="/settings">Paramètres</a>
+    </li>
+  </ul>
+  <app-user-infos></app-user-infos>
+</nav>
