@@ -7,14 +7,13 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  public form: FormGroup;
-
-  constructor(
-    private formBuilder: FormBuilder,
-    public userService: UserService
-  ) {
-    this.form = this.formBuilder.group({
-      name: ['', [Validators.required]],
-    });
-  }
+  // public form: FormGroup;
+  // constructor(
+  //   private formBuilder: FormBuilder,
+  //   public userService: UserService
+  // ) {
+  //   this.form = this.formBuilder.group({
+  //     name: ['', [Validators.required]],
+  //   });
+  // }
 }
