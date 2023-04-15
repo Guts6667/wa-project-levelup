@@ -8,8 +8,13 @@ import { Observable, map } from 'rxjs';
 })
 export class UserService {
   public users: User[] = [];
+  public _printUser: {} = {};
 
   constructor(private httpClient: HttpClient) {}
+
+  public printUser() {
+    return (this._printUser = this.users[0]);
+  }
 
   public getUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>('http://localhost:3000/users').pipe(
