@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SettingsService } from 'src/app/services/settings.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -7,7 +8,11 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./user-infos.component.scss'],
 })
 export class UserInfosComponent {
-  constructor(public userService: UserService) {
+  constructor(
+    public userService: UserService,
+    public settingsService: SettingsService
+  ) {
     userService.getUsers().subscribe();
+    settingsService.getSettings().subscribe();
   }
 }

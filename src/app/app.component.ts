@@ -11,7 +11,7 @@ export class AppComponent {
   showHeader: boolean = true;
 
   constructor(private Location: Location) {
-    console.log(this.Location.path());
+    // console.log(this.Location.path());
     if (this.Location.path() === '') {
       this.showHeader = false;
     } else {

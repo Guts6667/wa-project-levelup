@@ -1,4 +1,18 @@
 <div>
   <span>Bonjour {{ userService.printUser().name }}</span>
-  <span>Prochain niveau dans </span>
+
+  <label for="file"
+    >Niveau:
+    {{ settingsService.currentLevel(userService.printUser().xp) }}</label
+  >
+
+  <progress
+    id="file"
+    max="1"
+    value="{{ settingsService.progressForLevelUp(userService.printUser().xp) }}"
+  ></progress>
+  <span
+    >Prochain niveau dans
+    {{ settingsService.xpNeededToNextLevel(userService.printUser().xp) }}</span
+  >
 </div>
