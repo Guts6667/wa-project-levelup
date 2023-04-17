@@ -1,17 +1,20 @@
 <div>
-  <span>Bonjour {{ userService.printUser().name }}</span>
+  <span *ngIf="userService.printUser()"
+    >Bonjour {{ userService.printUser().name }}</span
+  >
 
-  <label for="file"
+  <label for="file" *ngIf="userService.printUser()"
     >Niveau:
     {{ settingsService.currentLevel(userService.printUser().xp) }}</label
   >
 
   <progress
+    *ngIf="userService.printUser()"
     id="file"
     max="1"
     value="{{ settingsService.progressForLevelUp(userService.printUser().xp) }}"
   ></progress>
-  <span
+  <span *ngIf="userService.printUser()"
     >Prochain niveau dans
     {{ settingsService.xpNeededToNextLevel(userService.printUser().xp) }}</span
   >

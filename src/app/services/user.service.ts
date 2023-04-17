@@ -10,7 +10,7 @@ import { Settings } from '../interfaces/settings';
 export class UserService {
   public users: User[] = [];
   public settings: Settings[] = [];
-  public _printUser: {} = {};
+  public _printUser: object = {};
 
   constructor(private httpClient: HttpClient) {}
 
