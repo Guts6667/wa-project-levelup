@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HeaderComponent {
   @Input() title: string = '';
+
   constructor(public userService: UserService) {
     userService.getUsers().subscribe();
   }

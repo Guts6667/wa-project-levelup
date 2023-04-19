@@ -8,7 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'parameters', component: SettingsComponent },
+  { path: 'settings', component: SettingsComponent },
   { path: '**', component: ErrorComponent },
 ];
 
